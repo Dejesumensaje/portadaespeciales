@@ -1,0 +1,201 @@
+/* Estilos Generales */
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0541BB;
+}
+
+/* Layout */
+
+section.hero {
+    padding: 40px 0;
+    background: url('./assets/bg-main-mobile.svg') no-repeat top right;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(244, 244, 244, 0.6);
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 290px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 290px;
+    display: flex;
+    align-items: center;
+    margin: 10px 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.card img {
+    margin: 0 auto;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.card img:hover {
+    transform: translateY(-10px);
+    transition: transform 100ms;
+}
+
+.col {
+    margin-bottom: 0px;
+}
+
+.logoMEN {
+    margin-bottom: 20px;
+}
+
+footer {
+    align-content: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.brand-footer {
+    background-color: #0541BB;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-footer ul {
+    margin: 30px 0 50px;
+    padding: 0;
+}
+
+.brand-footer ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.brand-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links-footer li a {
+    position: relative;
+    white-space: nowrap;
+}
+
+.links-footer li a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:yellow;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.links-footer li a:hover::before {
+    transform: scaleX(1);
+    transition: 0.1s ease-out;
+}
+
+.institucional {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+}
+
+.edusitios a {
+    padding: 10px 40px;
+    background-color: #F94093;
+    border-radius: 0.5rem;
+}
+
+.edusitios a:hover {
+    background-color: #8C60F0;
+}
+
+/* Responsive */
+
+@media (min-width: 992px) {
+    section.hero {
+        background: url('./assets/bg-main.svg') no-repeat top center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px,1fr));
+        grid-gap: 10px;
+        grid-row-gap: 20px;
+    }
+    .intro {
+        grid-column-end: span 2;
+        margin: 0;
+    }
+    .card {
+        margin: 0;
+    }
+    .col {
+        margin: 0;
+    }
+    .brand-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    .brand-footer ul {
+        margin: 0;
+    }
+    .brand-footer ul li:last-child {
+        margin-bottom: 0;
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        width:70%;
+    }
+    .links-footer {
+        margin-right: 100px;
+        text-align: left;
+    }
+    .institucional {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        width: 900px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    .logoMEN {
+        margin-bottom: 0;
+    }
+}
